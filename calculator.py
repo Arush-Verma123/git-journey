@@ -5,18 +5,19 @@ while(True):
     Enter 4: To divide
     Enter 5: To exit the calculator.
     '''))
-    a=int(input("Enter the first number:"))
-    b=int(input("Enter the second number:"))
     if(c==5):
         break
-    elif(c==1):
-        print(f"{a}+{b}=",a+b)
-    elif(c==2):
-        print(f"{a}-{b}=",a-b)
-    elif(c==3):
-        print(f"{a}*{b}=",a*b)
-    elif(c==4):
-        print(f"{a}/{b}=",a/b)
-    else:
+    elif(c not in (1,2,3,4,5)):
         print("Wrong input!")
+    else:
+        a=int(input("Enter the first number:"))
+        b=int(input("Enter the second number:"))
+        if(c==1):
+            print(f"{a}+{b}=",a+b)
+        elif(c==2):
+            print(f"{a}-{b}=",a-b)
+        elif(c==3):
+            print(f"{a}*{b}=",a*b)
+        else:
+            print(f"{a}/{b}=",a/b)
 print("Successfully exited the caluclator. :)")
